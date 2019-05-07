@@ -1,0 +1,52 @@
+body{
+	/*background-color: #34495e;*/
+}
+
+/*Affine*/
+
+.container{
+    background: #d8e2d8;
+    width: 95%;
+    margin-top: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: -webkit-body;
+    overflow:hidden;
+
+} /*container*/
+input[type='text']{
+	font-size: 25px;
+}
+.container .row >h3{
+    color: lightseagreen;
+    font-size: 29px;
+    font-family: -webkit-body;
+}
+.container .row .encrypte{
+	overflow: hidden;
+	border-bottom: 1px solid black;
+	padding-bottom: 30px;
+	background: cadetblue;
+
+}
+.container .row .encrypte h3{
+	
+	padding-top: 30px;
+	color: rebeccapurple;
+    font-size: 29px;
+    font-family: -webkit-body;
+}
+.container .row .encrypte form button {
+	margin-top: 30px;
+    margin-left: 41%;
+}
+.container .row .decrypte {
+	background: brown;
+    padding-top: 30px;
+}
+.container .row .decrypte form button {
+	margin-top: 30px;
+    margin-left: 41%;
+    margin-bottom: 20px;
+}
+ /*End Affine*/

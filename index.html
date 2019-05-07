@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>project</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/css/all.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+
+ <div class="container caser">
+	 <div class="row">
+	 	<h3 class="text-center">caeser cipher</h3>
+	  	<div class="encrypte">
+	  	  <h3 class="text-center">Encrypte caeser</h3> 
+	  	  <form>
+	  	  	<div class="info col-md-4">
+	  	  		<label>Encrypte</label>
+	  	  		<input type="text" name="Affine_encrypte" placeholder="Enter Encrypte" class="form-control" id="caeser_want_encrypte">
+	  	  	</div><!--  info -->
+
+	  	  	<div class="info col-md-4">
+	  	  		<label style="color: yellow">Write key like that (key)</label>
+	  	  		<input type="text" name="Affine_key" placeholder="Enter key" class="form-control" id="caeser_key">
+	  	  	</div> <!-- info -->
+
+           <div class="info col-md-4">
+	  	  		<label>Decrypte</label>
+	  	  		<input type="text" name="Affine_decrypte" placeholder="Text Decypted" class="form-control" id="caeser_encrypted">
+	  	  	</div> <!-- info -->
+             <button class="btn btn-primary" id="start_encrypte_caeser"> Start Encrypte</button>
+	  	  </form>
+	  	</div> <!-- encrypte -->
+
+	  	<div class="decrypte">
+		  	   <h3 class="text-center">Decrypte caeser</h3> 
+		  	  <form>
+		  	  	<div class="info col-md-4">
+		  	  		<label>Decrypte</label>
+		  	  		<input type="text" placeholder="Enter Decrypte" class="form-control" 
+		  	  		  id="text_caeser_encrypted">
+		  	  	</div><!--  info -->
+
+		  	  	<div class="info col-md-4">
+		  	  		<label style="color: yellow">Write key like that (key)</label>
+		  	  		<input type="text" placeholder="Enter key" class="form-control" id="caeser_key2">
+		  	  	</div> <!-- info -->
+
+	           <div class="info col-md-4">
+		  	  		<label>Encrypte</label>
+		  	  		<input type="text"  placeholder="Text Encypted" class="form-control" id="caeser_begin">
+		  	  	</div> <!-- info -->
+	             <button class="btn btn-primary" id="start_decrypte_caeser"> Start Decrypte</button>
+		  	  </form>
+
+	  	</div> <!-- decrypte -->
+
+	  </div><!-- row -->
+
+ </div>	<!-- container -->
+ <hr>
+<hr>
+<hr>
+
+
+ <div class="container Affine">
+	 <div class="row">
+	 	<h3 class="text-center">Affine cipher</h3>
+	  	<div class="encrypte">
+	  	  <h3 class="text-center">Encrypte Affine</h3> 
+	  	  <form>
+	  	  	<div class="info col-md-4">
+	  	  		<label>Encrypte</label>
+	  	  		<input type="text" name="Affine_encrypte" placeholder="Enter Encrypte" class="form-control" id="Affine_encrypte">
+	  	  	</div><!--  info -->
+
+	  	  	<div class="info col-md-4">
+	  	  		<label style="color: yellow">Write key like that (key1,key2)</label>
+	  	  		<input type="text" name="Affine_key" placeholder="Enter key" class="form-control" id="Affine_key">
+	  	  	</div> <!-- info -->
+
+           <div class="info col-md-4">
+	  	  		<label>Decrypte</label>
+	  	  		<input type="text" name="Affine_decrypte" placeholder="Text Decypted" class="form-control" id="Affine_decrypte">
+	  	  	</div> <!-- info -->
+             <button class="btn btn-primary" id="start_affine_encrypte"> Start Encrypte</button>
+	  	  </form>
+	  	</div> <!-- encrypte -->
+
+	  	<div class="decrypte">
+		  	   <h3 class="text-center">Decrypte Affine</h3> 
+		  	  <form>
+		  	  	<div class="info col-md-4">
+		  	  		<label>Decrypte</label>
+		  	  		<input type="text" placeholder="Enter Decrypte" class="form-control" 
+		  	  		  id="text_decrypted">
+		  	  	</div><!--  info -->
+
+		  	  	<div class="info col-md-4">
+		  	  		<label style="color: yellow">Write key like that (key1,key2)</label>
+		  	  		<input type="text" placeholder="Enter key" class="form-control" id="Affine_key_d">
+		  	  	</div> <!-- info -->
+
+	           <div class="info col-md-4">
+		  	  		<label>Encrypte</label>
+		  	  		<input type="text"  placeholder="Text Encypted" class="form-control" id="encrypted">
+		  	  	</div> <!-- info -->
+	             <button class="btn btn-primary" id="start_decrypte"> Start Decrypte</button>
+		  	  </form>
+
+	  	</div> <!-- decrypte -->
+
+	  </div><!-- row -->
+
+ </div>	<!-- container -->
+ <hr>
+ <hr>
+
+
+
+
+ <div class="container rot13">
+	 <div class="row">
+	 	<h3 class="text-center">Atbash cipher</h3>
+	  	<div class="encrypte">
+	  	  <h3 class="text-center">Encrypte Atbash</h3> 
+	  	  <form>
+	  	  	<div class="info col-md-6">
+	  	  		<label>Encrypte</label>
+	  	  		<input type="text" name="Affine_encrypte" placeholder="Enter Encrypte" class="form-control" id="Atbash_want_to_encrypte">
+	  	  	</div><!--  info -->
+
+
+           <div class="info col-md-6">
+	  	  		<label>Decrypte</label>
+	  	  		<input type="text" name="Affine_decrypte" placeholder="Text Decypted" class="form-control" id="Atbash_message_encrypted">
+	  	  	</div> <!-- info -->
+             <button class="btn btn-primary" id="start_atbash_encrypte"> Start Encrypte</button>
+	  	  </form>
+	  	</div> <!-- encrypte -->
+
+	  	<div class="decrypte">
+		  	   <h3 class="text-center">Decrypte Atbash</h3> 
+		  	  <form>
+		  	  	<div class="info col-md-6">
+		  	  		<label>Decrypte</label>
+		  	  		<input type="text" placeholder="Enter Decrypte" class="form-control" 
+		  	  		  id="text_atbash_decrypted">
+		  	  	</div><!--  info -->
+
+
+	           <div class="info col-md-6">
+		  	  		<label>Encrypte</label>
+		  	  		<input type="text"  placeholder="Text Encypted" class="form-control" 
+		  	  		id="atbash_encrypted">
+		  	  	</div> <!-- info -->
+	             <button class="btn btn-primary" id="start_atbash_decrypte"> Start Decrypte</button>
+		  	  </form>
+
+	  	</div> <!-- decrypte -->
+
+	  </div><!-- row -->
+
+ </div>	<!-- container -->
+ <hr>
+ <hr>
+
+
+<div class="container rot13">
+	 <div class="row">
+	 	<h3 class="text-center">Rot13 cipher</h3>
+	  	<div class="encrypte">
+	  	  <h3 class="text-center">Encrypte Rot13</h3> 
+	  	  <form>
+	  	  	<div class="info col-md-6">
+	  	  		<label>Encrypte</label>
+	  	  		<input type="text"  placeholder="Enter Encrypte" class="form-control" id="rot13_want_encrypte">
+	  	  	</div><!--  info -->
+
+
+           <div class="info col-md-6">
+	  	  		<label>Decrypte</label>
+	  	  		<input type="text" name="Affine_decrypte" placeholder="Text Decypted" class="form-control" id="rot13_encrypted">
+	  	  	</div> <!-- info -->
+             <button class="btn btn-primary" id="start_rot13_encrypte"> Start Encrypte</button>
+	  	  </form>
+	  	</div> <!-- encrypte -->
+
+	  	<div class="decrypte">
+		  	   <h3 class="text-center">Decrypte Rot13</h3> 
+		  	  <form>
+		  	  	<div class="info col-md-6">
+		  	  		<label>Decrypte</label>
+		  	  		<input type="text" placeholder="Enter Decrypte" class="form-control" 
+		  	  		  id="text_rot13_decrypted">
+		  	  	</div><!--  info -->
+
+
+	           <div class="info col-md-6">
+		  	  		<label>Encrypte</label>
+		  	  		<input type="text"  placeholder="Text Encypted" class="form-control" 
+		  	  		id="mean_hello">
+		  	  	</div> <!-- info -->
+	             <button class="btn btn-primary" id="start_rot13_decrypte"> Start Decrypte</button>
+		  	  </form>
+
+	  	</div> <!-- decrypte -->
+
+	  </div><!-- row -->
+
+ </div>	<!-- container -->
+ <hr>
+ <hr> 
+ <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
