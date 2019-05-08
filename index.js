@@ -144,7 +144,6 @@ let start_decrypte_caeser =document.getElementById('start_decrypte_caeser'),
     caeser_key = document.getElementById('caeser_key2'),
     caeser_begin = document.getElementById('caeser_begin');
 
-
 start_decrypte_caeser.onclick = function(ev){
   ev.preventDefault();
   caeser_begin.value ='';
@@ -192,15 +191,11 @@ start_decrypte_caeser.onclick = function(ev){
       	caeser_begin.value += plaintext;
       }
   }//end for 
-
 }
-
 // atbash cipher 
 let start_atbash_encrypte = document.getElementById('start_atbash_encrypte'),
     text_Atbash_want_to_encrypte = document.getElementById('Atbash_want_to_encrypte'),
     text_Atbash_message_encrypted =document.getElementById('Atbash_message_encrypted');
-
-
   	let	letter = [];
         letter[25] ="a";
 	    letter[24] ="b";
@@ -228,8 +223,6 @@ let start_atbash_encrypte = document.getElementById('start_atbash_encrypte'),
 	    letter[2] ='x';
 	    letter[1] ='y';
 	    letter[0] ='z';
-
-
 let	letter2 = [];
         letter2[25] ="A";
 	    letter2[24] ="B";
@@ -276,8 +269,6 @@ start_atbash_encrypte.onclick = function(ev){
     }//end for 
 
 }  //end start_atbash 
-
-
 // start atbash decrypted
 let text_atbash_decrypted = document.getElementById('text_atbash_decrypted'),
     atbash_encrypted = document.getElementById('atbash_encrypted'),
@@ -300,12 +291,8 @@ start_atbash_decrypte.onclick = function(ev){
           ciphertext += letter2[position];
           atbash_encrypted.value = ciphertext;
     	}
-    	
     }//end for 
-
 }
-
-
 //rot 13 
 let start_rot13_encrypte = document.getElementById('start_rot13_encrypte'),
     text_rot13_want_encrypte = document.getElementById('rot13_want_encrypte'),
@@ -345,24 +332,11 @@ start_rot13_encrypte.onclick = function(ev){
 	        }else{
 	        	text_rot13_encrypted.value +=String.fromCharCode(plain);
 	        }
-    	}else{
-	      	
+    	}else{   	
       }
-    	
     }//end for 
-  
 }// end start encrypte rot13
-
-
-
 // start decrypte rot 13
-
-
-
-
-
-
-
 let start_rot13_decrypte = document.getElementById('start_rot13_decrypte'),
     text_rot13_decrypted = document.getElementById('text_rot13_decrypted'),
     en_rot13_encrypted      = document.getElementById('mean_hello');
@@ -401,7 +375,86 @@ start_rot13_decrypte.onclick = function(ev){
 	        	en_rot13_encrypted.value  +=String.fromCharCode(plain);
 	        }
     	}
-    	
     }//end for 
-
 }//start rot13 decypte 
+// Start mono 
+let start_mono_encrypte 	= document.getElementById('start_mono_encrypte'),
+    text_mono_want_encrypte = document.getElementById('mono_want_encrypte'),
+    mono 	= document.getElementById('mono_aba_encrypted');
+let alhaptes = [],
+    alhaptes2 = [];
+start_mono_encrypte.onclick = function(ev){
+   ev.preventDefault();
+   ciphertext = '';
+   
+    for(let i = 0 ; i < 2000; i++){
+
+    	     alhaptes[0]=String.fromCharCode(Math.floor((Math.random() * 25) + 65));
+    		let ranumber =String.fromCharCode( Math.floor((Math.random() * 25) + 65));
+    		if(alhaptes.includes(ranumber)){
+    			continue;
+    		}else{
+    			alhaptes.push(ranumber);
+    			
+    		}
+    	
+    	
+    } // for 
+    
+   
+     for(let z = 0 ; z < 2000; z++){
+
+    	     alhaptes[0]=String.fromCharCode(Math.floor((Math.random() * 26) + 97));
+    		let ranumber =String.fromCharCode( Math.floor((Math.random() * 26) + 97));
+    		if(alhaptes2.includes(ranumber)){
+    			continue;
+    		}else{
+    			alhaptes2.push(ranumber);
+    			
+    		}
+    } // for 
+
+   for(let x = 0; x<text_mono_want_encrypte.value.length;x++){
+
+   		if(text_mono_want_encrypte.value.charCodeAt(x)>= 97 && text_mono_want_encrypte.value.charCodeAt(x)<= 122 ){
+          
+           let search = alhaptes2.indexOf(text_mono_want_encrypte.value[x]);
+           
+           ciphertext +=letter[search];
+
+         
+    	}else if(text_mono_want_encrypte.value.charCodeAt(x)>= 65 && text_mono_want_encrypte.value.charCodeAt(x)<= 90 ){
+          let search = alhaptes.indexOf(text_mono_want_encrypte.value[x]);
+           ciphertext +=letter2[search];
+    	}
+    	mono.value = ciphertext;
+
+   }// end for 
+}  // end mono encrypte  
+//start decrypte
+let start_mono_decrypte = document.getElementById('start_mono_decrypte'),
+    text_mono_decrypted = document.getElementById('text_mono_decrypted'),
+   _mono_encrypted = document.getElementById('text_mono_encrypted');
+
+
+start_mono_decrypte.onclick = function(ev){
+  ev.preventDefault();
+  ciphertext = '';
+  
+  for(let i = 0;i< text_mono_decrypted.value.length;i++){
+  	if(text_mono_decrypted.value.charCodeAt(i)>= 97 && text_mono_decrypted.value.charCodeAt(i)<= 122 ){
+          
+         let search = alhaptes2.indexOf(text_mono_want_encrypte.value[i]);
+           ciphertext +=alhaptes2[search];
+          _mono_encrypted.value = ciphertext;
+
+    	}else if (text_mono_decrypted.value.charCodeAt(i)>= 65 && text_mono_decrypted.value.charCodeAt(i)<= 90 ){
+    	 
+    	let search = alhaptes.indexOf(text_mono_want_encrypte.value[i]);
+           ciphertext +=alhaptes[search];
+          _mono_encrypted.value = ciphertext
+    	}
+    	
+  }// end for 
+	
+}    
